@@ -40,7 +40,7 @@ Output = 11
 Notes:
 - Time complexity is O(row*col)
 """
-
+4
 import numpy as np
 
 # recursion function to solve the maze

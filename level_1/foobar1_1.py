@@ -16,5 +16,11 @@ def solution(text):
     end = end + 1
 
   num_slices = text.count(longest)
+  print(num_slices)
 
   return num_slices
+
+if __name__ == '__main__':
+  s = "abccbaabccba"
+  # s = "abcabcabcabc"
+  solution(s)

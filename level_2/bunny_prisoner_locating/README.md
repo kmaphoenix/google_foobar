@@ -1,4 +1,4 @@
-""" Google Foobar Level 2, Round 1 - Bunny Prisoner Locating
+# Bunny Prisoner Locating
 
 Keeping track of Commander Lambda's many bunny prisoners is starting to get 
 tricky. You've been tasked with writing a program to match bunny prisoner IDs 
@@ -7,10 +7,12 @@ of Commander Lambda's space station, and as a result the prison blocks have an
 unusual layout. They are stacked in a triangular shape, and the bunny prisoners
 are given numerical IDs starting from the corner, as follows:
 
+```
 | 7
 | 4 8
 | 2 5 9
 | 1 3 6 10
+```
 
 Each cell can be represented as points (x, y), with x being the distance from 
 the vertical wall, and y being the height from the ground. For example, the 
@@ -23,45 +25,29 @@ location (x, y). Each value of x and y will be at least 1 and no greater than
 100,000. Since the prisoner ID can be very large, return your answer as a 
 string representation of the number.
 
-Test cases
-==========
+--- 
+
+### Test cases
 Inputs:
+```
     (int) x = 2
     (int) y = 3
+```
 Output:
+```
     (string) "8"
+```
 
 Inputs:
+```
     (int) x = 5
     (int) y = 10
+```
 Output:
+```
     (string) "96"
+```
 
-Time to solve: 72 hours.
-"""
+---
 
-def solution(x,y):
-    # num = 1
-    start_x = 1
-    num = int((((y + 0)*(y - 1))/2)+1)
-
-    def pattern(x, y, start_x, num):
-        
-        # base case
-        while start_x <= x:
-
-            if (start_x,y) == (x,y):
-                print(str(num))
-                return num
-                
-            # recursion
-            (x, y, start_x, num) = (x, y, start_x+1, num+start_x+y)
-        return x
-
-    value = pattern(x, y, start_x, num)
-
-    return str(value)
-
-if __name__ == '__main__':
-    # solution(2,3)
-    solution(5,10)
+### Time to Solve: 72 hours

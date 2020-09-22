@@ -1,5 +1,3 @@
-## SUBMITTED SOLUTION ##
-
 """
 lucky triples (tuples)
 
@@ -49,8 +47,8 @@ def solution(l):
     print(lucky_triples)
 
 if __name__ == '__main__':
-    l = sorted([random.randint(1, 1000000) for x in range(2000)]) # big test
-    # l = [1,2,3,4,5,6] # base test
+    # l = sorted([random.randint(1, 1000000) for x in range(2000)]) # big test
+    l = [1,2,3,4,5,6] # base test
     n = len(l)
     stime = time.time()
     solution(l)
